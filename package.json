@@ -1,0 +1,54 @@
+{
+  "name": "from-exponential",
+  "version": "1.0.0",
+  "description": "Lightweight module to convert number from exponential notaton to a human readable string",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "files": [
+    "/src/",
+    "/dist/"
+  ],
+  "scripts": {
+    "build": "npm run bundle && npm run bundle:min",
+    "bundle": "rollup -c build/rollup.config.js",
+    "bundle:min": "rollup -c build/rollup.uglify.config.js",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "lint": "eslint --ext .js ./src ./test",
+    "lint:fix": "eslint --ext .js ./src ./test --fix",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrpne/from-exponential.git"
+  },
+  "keywords": [
+    "format",
+    "from",
+    "exponential",
+    "number",
+    "pretty",
+    "human",
+    "readable",
+    "string"
+  ],
+  "author": "shrpne <shrpne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shrpne/from-exponential/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.1",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-terser": "^1.0.1"
+  }
+}
