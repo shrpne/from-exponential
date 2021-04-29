@@ -4,8 +4,10 @@
   "description": "Lightweight module to convert number from exponential notaton to a human readable string",
   "main": "dist/index.js",
   "module": "src/index.js",
+  "types": "types/index.d.ts",
   "files": [
     "/src/",
+    "/types/",
     "/dist/"
   ],
   "scripts": {
