@@ -1,12 +1,9 @@
-import babel from 'rollup-plugin-babel';
+import {babel} from '@rollup/plugin-babel';
 
 export default {
     input: 'src/index.js',
     plugins: [
-        babel({
-            babelrc: false,
-            presets: [['env', { modules: false }]],
-        }),
+        babel(),
     ],
     output: {
         file: 'dist/index.js',

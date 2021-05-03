@@ -26,8 +26,8 @@ export default function fromExponential(num) {
         if (countWholeAfterTransform > 0) {
             // transform whole to fraction
             const wholeDigitsAfterTransform = wholeDigits.substr(0, countWholeAfterTransform);
-            const wholeDigitsTransformedToFracton = wholeDigits.substr(countWholeAfterTransform);
-            return `${sign + wholeDigitsAfterTransform}.${wholeDigitsTransformedToFracton}${fractionDigits}`;
+            const wholeDigitsTransformedToFraction = wholeDigits.substr(countWholeAfterTransform);
+            return `${sign + wholeDigitsAfterTransform}.${wholeDigitsTransformedToFraction}${fractionDigits}`;
         } else {
             // not enough whole digits: prepend with fractional zeros
 
