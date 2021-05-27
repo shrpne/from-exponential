@@ -24,21 +24,27 @@ describe('fromExponential', () => {
     test('positive exponential-like strings', () => {
         expect(fromExponential('0.123e-1')).toEqual('0.0123');
         expect(fromExponential('1.123e-1')).toEqual('0.1123');
+        expect(fromExponential('1.123e-5')).toEqual('0.00001123');
         expect(fromExponential('12.123e-1')).toEqual('1.2123');
+        expect(fromExponential('12.123e-5')).toEqual('0.00012123');
         expect(fromExponential('123.123e-1')).toEqual('12.3123');
-        expect(fromExponential('123.123e+4')).toEqual('1231230');
-        expect(fromExponential('123.123e+2')).toEqual('12312.3');
+        expect(fromExponential('123.123e-5')).toEqual('0.00123123');
         expect(fromExponential('123.123e+0')).toEqual('123.123');
+        expect(fromExponential('123.123e+2')).toEqual('12312.3');
+        expect(fromExponential('123.123e+4')).toEqual('1231230');
     });
 
     test('negative exponential-like strings', () => {
         expect(fromExponential('-0.123e-1')).toEqual('-0.0123');
         expect(fromExponential('-1.123e-1')).toEqual('-0.1123');
+        expect(fromExponential('-1.123e-5')).toEqual('-0.00001123');
         expect(fromExponential('-12.123e-1')).toEqual('-1.2123');
+        expect(fromExponential('-12.123e-5')).toEqual('-0.00012123');
         expect(fromExponential('-123.123e-1')).toEqual('-12.3123');
-        expect(fromExponential('-123.123e+4')).toEqual('-1231230');
-        expect(fromExponential('-123.123e+2')).toEqual('-12312.3');
+        expect(fromExponential('-123.123e-5')).toEqual('-0.00123123');
         expect(fromExponential('-123.123e+0')).toEqual('-123.123');
+        expect(fromExponential('-123.123e+2')).toEqual('-12312.3');
+        expect(fromExponential('-123.123e+4')).toEqual('-1231230');
     });
 
     test('not exponential', () => {
