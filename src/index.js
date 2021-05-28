@@ -33,7 +33,7 @@ export default function fromExponential(num) {
 
             // first e goes to dotted zero
             let zeros = '0.';
-            e += 1;
+            e = countWholeAfterTransform;
             while (e) {
                 zeros += '0';
                 e += 1;
