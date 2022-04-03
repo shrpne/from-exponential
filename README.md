@@ -21,7 +21,7 @@ npm install from-exponential
 ## Usage
 
 ```js
-import fromExponential from 'from-exponential';
+import * as fromExponential from 'from-exponential';
 
 fromExponential(1.123e-10); // => '0.0000000001123'
 fromExponential('-12.123e-1'); // => '-1.2123'
