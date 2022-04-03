@@ -3,4 +3,4 @@
  */
 declare function fromExponential(num: number | string | string[]): string;
 
-export = fromExponential;
+export  {fromExponential};
